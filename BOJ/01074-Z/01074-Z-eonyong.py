@@ -1,0 +1,1 @@
+# git commit -m "code: Solve boj 01074 Z (eonyong)"
