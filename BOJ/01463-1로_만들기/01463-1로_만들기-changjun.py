@@ -1,1 +1,1 @@
-# git commit -m "code: Solve boj 01463 1로 만들기 (changjun)"
+# git commit -m "submit : BOJ 01463 1로 만들기 (changjun)"

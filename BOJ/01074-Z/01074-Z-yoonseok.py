@@ -1,1 +1,1 @@
-# git commit -m "code: Solve boj 01074 Z (yoonseok)"
+# git commit -m "submit : BOJ 01074 Z (yoonseok)"

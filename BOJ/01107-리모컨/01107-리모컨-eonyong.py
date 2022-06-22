@@ -1,1 +1,1 @@
-# git commit -m "code: Solve boj 01107 리모컨 (eonyong)"
+# git commit -m "submit : BOJ 01107 리모컨 (eonyong)"

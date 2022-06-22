@@ -1,1 +1,1 @@
-# git commit -m "code: Solve boj 01260 DFS와 BFS (yoonseok)"
+# git commit -m "submit : BOJ 01260 DFS와 BFS (yoonseok)"
