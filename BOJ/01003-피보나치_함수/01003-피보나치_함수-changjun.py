@@ -1,4 +1,4 @@
-# git commit -m "submit: BOJ boj 01003 피보나치 함수 (changjun)"
+# git commit -m "submit: BOJ 01003 피보나치 함수 (changjun)"
 
 t = int(input())
 lst0 = [0]*41
