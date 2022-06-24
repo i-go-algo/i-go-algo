@@ -8,5 +8,5 @@ for tc in range(t):
     for i in range(2, n + 1):
         fibo[i] = (fibo[i - 1][0] + fibo[i - 2][0], fibo[i - 1][1] + fibo[i - 2][1])
 
-    print(fibo[n][0], end=' ')
+    print(fibo[n][0], fibo[n][1])
     print(fibo[n][1])
