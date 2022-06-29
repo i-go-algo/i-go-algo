@@ -36,23 +36,29 @@
 
 # 💡 필독 사항
 
-### [1️⃣ Problem Set 내려받기]
+### 1️⃣ Problem Set 내려받기
 
 1. master 브랜치에서 pull 받기
 2. 본인의 브랜치에서 master 브랜치 merge 하기
 
-### [2️⃣ 자신의 브랜치에서 문제 풀기]
+<br />
+
+### 2️⃣ 자신의 브랜치에서 문제 풀기
 
 1. 문제를 푼 후, 자신의 원격 브랜치에 add, commit, push 하기
 2. Github 로 가서 PR 생성하기
 
-### [3️⃣다른 사람이 푼 문제 리뷰하기]
+<br />
+
+### 3️⃣다른 사람이 푼 문제 리뷰하기
 
 1. 다른 사람 PR 의 ‘Files changed’ 버튼 클릭 
 2. 리뷰 작성하기 (질문, 칭찬, 개선안) 
 3. ‘Review changes’ 버튼 클릭 
 
-### [4️⃣ 나머지 멤버들의 Approve 를 다 받으면 본인 PR 을 master 에 merge 하기]
+<br />
+
+### 4️⃣ 나머지 멤버들의 Approve 를 다 받으면 본인 PR 을 master 에 merge 하기
 
 <br />
 
