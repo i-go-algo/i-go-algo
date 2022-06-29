@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 01620 나는야 포켓몬 마스터 이다솜 (eonyong)"
