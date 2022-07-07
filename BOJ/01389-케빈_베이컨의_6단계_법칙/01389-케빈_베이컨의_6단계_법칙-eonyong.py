@@ -1,4 +1,4 @@
-# git commit -m "submit : BOJ 01389 케빈 베이컨의 6단계 법칙 (eonyong)"
+# `git commit -m "submit : BOJ 01389 케빈 베이컨의 6단계 법칙 (eonyong)"`
 n, m = map(int, input().split())
 users = [[] for _ in range(n + 1)]
 distance, member = float('inf'), 0  # 케빈 베이컨 길이, 길이가 가장 짧은 멤버의 번호 저장 변수
