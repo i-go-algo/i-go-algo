@@ -17,7 +17,4 @@ def func(x, y):
         val = func(x, y//2)
         return (val * val) % c
 
-
-
-
 print(func(a, b))
