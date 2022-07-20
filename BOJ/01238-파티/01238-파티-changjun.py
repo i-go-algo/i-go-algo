@@ -34,7 +34,6 @@ for i in range(1, n+1):
     tmp = distance[i][x] + distance[x][i]
     if tmp > max_dist:
         max_dist = tmp
-        print(1)
 print(max_dist)
 
 
