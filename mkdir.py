@@ -56,6 +56,5 @@ for data in datas:
 with open('./.github/PULL_REQUEST_TEMPLATE.md', 'w', encoding='utf8') as f:
     f.write('## 💡 Idea & Algorithm <!-- 핵심 아이디어 및 알고리즘 -->\n')
     for prob in prob_lst:
-        f.write(f'### {prob}\n')
-        f.write('<br/>\n')
+        f.write(f'### {prob}  ')
     f.write('## 💬 Comment <!-- 후기 -->\n')
