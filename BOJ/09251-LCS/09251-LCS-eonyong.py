@@ -8,5 +8,4 @@ def LCS(a, b):
             c[i][j] = c[i - 1][j - 1] + 1 if a[i] == b[j] else max(c[i - 1][j], c[i][j - 1])
     return max(max(c))
 
-
 print(LCS(*[input() for _ in range(2)]))
