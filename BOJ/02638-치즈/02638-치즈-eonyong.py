@@ -1,7 +1,6 @@
 # git commit -m "submit : BOJ 02638 치즈 (eonyong)"
 from collections import defaultdict
 
-
 def happyCheeze(boards, visited, n, m):
     boundary, edges, getRidOf = defaultdict(int), [[0, 0]], []
     while edges:
