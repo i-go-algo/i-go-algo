@@ -4,6 +4,5 @@ combs = [[1]*101 for i in range(101)]
 for i in range(1,101):
     for j in range(1,i+1):
         combs[i][j] = combs[i-1][j-1]+combs[i-1][j]
-for i in range(10):
-    print(combs[i])
+
 print(combs[M-1][N])
