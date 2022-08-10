@@ -1,4 +1,4 @@
-# git commit -m "submit : BOJ 09935 문자열 폭발 (changjun)"
+# git commit -am "submit : BOJ 09935 문자열 폭발 (changjun)"
 
 tmp = input()
 bang = list(input())
