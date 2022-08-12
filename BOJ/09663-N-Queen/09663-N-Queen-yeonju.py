@@ -18,3 +18,4 @@ n = int(input())
 res = 0
 nqueen([0] * n, 0)
 print(res)
+

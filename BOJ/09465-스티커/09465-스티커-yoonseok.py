@@ -11,4 +11,4 @@ for tc in range(T):
         ans[0][i] = max(ans[1][i-1]+stickers[0][i],ans[0][i-1])
         ans[1][i] = max(ans[0][i-1]+stickers[1][i],ans[1][i-1])
     print(max(ans[0][n-1],ans[1][n-1]))
-        
+     
