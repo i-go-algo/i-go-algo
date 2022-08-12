@@ -50,3 +50,4 @@ for case in range(t):
 #     func(0, 1, lst[0][1])
 #     func(1, 1, lst[1][1])
 #     print(ans)
+
