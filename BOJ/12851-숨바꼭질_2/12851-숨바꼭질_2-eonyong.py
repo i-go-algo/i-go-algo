@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 12851 숨바꼭질 2 (eonyong)"
