@@ -13,4 +13,4 @@ for row in range(1, n + 1):
 
 for _ in range(m):
     r1, c1, r2, c2 = map(int, stdin.readline().split())
-    print(boards[r2][c2] - boards[r2][c1 - 1] - boards[r1 - 1][c2] + boards[r1 - 1][c1 - 1])
+    print(boards[r2][c2] - boards[r2][c1 - 1] - boards[r1 - 1][c2] + boards[r1 - 1][c1 - 1]) 
