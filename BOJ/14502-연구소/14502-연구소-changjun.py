@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 14502 연구소 (changjun)"
