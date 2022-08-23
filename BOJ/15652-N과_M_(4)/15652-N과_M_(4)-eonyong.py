@@ -10,5 +10,4 @@ def prune(i, n, arr, ls, m):
 
 
 n, m = map(int, input().split())
-
 prune(0, n, [], range(1, n + 1), m)
