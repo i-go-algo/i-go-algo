@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 12100 2048 (Easy) (yoonseok)"
