@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 14500 테트로미노 (yoonseok)"

@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 14501 퇴사 (yeonju)"

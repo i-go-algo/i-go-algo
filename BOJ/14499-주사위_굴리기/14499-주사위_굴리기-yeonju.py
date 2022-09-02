@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 14499 주사위 굴리기 (yeonju)"
