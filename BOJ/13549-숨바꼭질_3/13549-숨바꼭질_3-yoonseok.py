@@ -11,10 +11,10 @@ while q:
     if nn==k:
         print(time)
         break
-    while nn*2<=100000 and (not vis[nn*2]):
+    if nn*2<=100000 and (not vis[nn*2]):
         heapq.heappush(q,(time,nn*2))
         vis[nn*2]=True
-        nn*=2
+        
     if nn-1>=0 and (not vis[nn-1]):
         heapq.heappush(q,(time+1,nn-1))
         vis[nn-1]=True

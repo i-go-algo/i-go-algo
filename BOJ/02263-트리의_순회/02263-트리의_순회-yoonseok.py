@@ -7,7 +7,7 @@ postorder = list(map(int,input().split()))
 index = [0]*(N+1)
 for i in range(N):
     index[inorder[i]]=i
-print(index)
+
 def preorder(in_l,in_r,po_l,po_r):
     if in_l>in_r or po_l>po_r:
         return

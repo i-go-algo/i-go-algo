@@ -9,9 +9,6 @@ for i in range(m):
     i,j,c = map(int,input().split())
     cost[i-1][j-1] = min(cost[i-1][j-1],c)
 
-for i in range(n):
-    print(*cost[i])
-
 for k in range(n):
     for i in range(n):
         for j in range(n):
