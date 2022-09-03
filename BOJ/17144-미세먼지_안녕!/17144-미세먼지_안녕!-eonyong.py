@@ -43,7 +43,7 @@ for _ in range(t):
         virtualBoard[idx][0], virtualBoard[idx + 1][0] = virtualBoard[idx + 1][0], virtualBoard[idx][0]
     for idx in range(c - 1):
         virtualBoard[r - 1][idx], virtualBoard[r - 1][idx + 1] = virtualBoard[r - 1][idx + 1], virtualBoard[r - 1][idx]
-    for idx in range(r - 1, air_y, -1):
+~    for idx in range(r - 1, air_y, -1):
         virtualBoard[idx][c - 1], virtualBoard[idx - 1][c - 1] = virtualBoard[idx - 1][c - 1], virtualBoard[idx][c - 1]
     for idx in range(c - 1, 0, -1):
         virtualBoard[air_y][idx], virtualBoard[air_y][idx - 1] = virtualBoard[air_y][idx - 1], virtualBoard[air_y][idx]
