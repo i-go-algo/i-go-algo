@@ -10,13 +10,14 @@ for i in range(r):
 for k in range(n):
     for i in range(n):
         for j in range(n):
-            if field[i][j] > field[i][k]+field[k][j]:
-                field[i][j] = field[i][k]+field[k][j]
+            field[i][j] = min(field[i][j], field[i][k]+field[k][j])
 max_items = 0
 
 for i in range(n):
     temp = items[i]
     for j in range(n):
+        if i==j: 
+            continue
         if field[i][j] <= m:
             temp+=items[j]
     max_items = max(max_items,temp)
