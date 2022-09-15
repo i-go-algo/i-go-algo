@@ -5,8 +5,7 @@ import sys
 def Yeonsanza(i, n, numbers, operates, oders, value):
     global maxVal, minVal
     if i == n:
-        maxVal = max(maxVal, int(value))
-        minVal = min(minVal, int(value))
+        maxVal, minVal = max(maxVal, int(value)), min(minVal, int(value))
     else:
         for j in range(4):
             if operates[j]:
