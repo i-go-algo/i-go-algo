@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 14891 톱니바퀴 (eonyong)"
