@@ -34,7 +34,7 @@ for data in datas:
     if not os.path.exists(path):
         os.makedirs(path)
         # 개별 파일 생성
-        members = ['changjun', 'eonyong', 'yeonju', 'yoonseok']
+        members = ['eonyong', 'yeonju', 'yoonseok']
 
         for member in members:
             filepath = os.path.join(path, f'{problem}-{member}.py')

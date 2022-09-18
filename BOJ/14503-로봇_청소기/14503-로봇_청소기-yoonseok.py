@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # git commit -m "submit : BOJ 14503 로봇 청소기 (yoonseok)"
 N, M = map(int,input().split())
 field_check = [[0]*M for i in range(N)]
@@ -38,3 +39,6 @@ while True:
             break
         turn_time = 0
 print(cnt)
+=======
+# git commit -m "submit : BOJ 14503 로봇 청소기 (yeonju)"
+>>>>>>> 4bdbd21ffd875cfb54f28405c4e651b25bbb4712
