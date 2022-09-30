@@ -29,8 +29,7 @@ def SortingArray(array, l, flag):
         nxt_numbers.append(nxt)
     if flag:
         # C연산 -> 뒤집은 boards와 최대 길이 반환
-        return list(
-            map(list, zip(*[nxt_number + [0] * (max_l - len(nxt_number)) for nxt_number in nxt_numbers]))), max_l
+        return list(map(list, zip(*[nxt_number + [0] * (max_l - len(nxt_number)) for nxt_number in nxt_numbers]))), max_l
     else:
         # R연산 -> boards와 최대 길이 반환
         return [nxt_number + [0] * (max_l - len(nxt_number)) for nxt_number in nxt_numbers], max_l
