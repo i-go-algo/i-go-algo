@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 17779 게리맨더링 2 (eonyong)"
