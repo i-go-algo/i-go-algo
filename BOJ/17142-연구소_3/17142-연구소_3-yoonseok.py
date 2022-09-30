@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 17142 연구소 3 (yoonseok)"

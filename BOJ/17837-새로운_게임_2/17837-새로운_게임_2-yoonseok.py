@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 17837 새로운 게임 2 (yoonseok)"
