@@ -8,7 +8,9 @@ input = sys.stdin.readline
 # 바이러스가 퍼지는 과정
 def Diffusions(virus, boards, visited, N, zero):
     value, cnt = 0, 0
-
+    # 선택된 바이러스 자리에 초기값 0을 입력
+    for r, c in virus:
+        visited[r][c] = 0
     while virus:
         row, col = virus.popleft()
         for j, i in [[-1, 0], [0, -1], [1, 0], [0, 1]]:
@@ -22,7 +24,7 @@ def Diffusions(virus, boards, visited, N, zero):
                     # 0의 갯수를 세는 cnt + 1 해준다
                     cnt += 1
                     value = max(value, visited[nj][ni])
-    
+
     # cnt가 초기 0의 갯수인 zero와 같다면 value 반환, 아니면 무한대값 반환
     if cnt == zero:
         return value
@@ -35,9 +37,7 @@ def SelectM(i, k, N, M, boards, viruses, arr, zero):
     global answer
     if i == M:
         visited = [[-1 for _ in range(N)] for _ in range(N)]
-        # 선택된 바이러스 자리에 초기값 0을 입력
-        for r, c in viruses:
-            visited[r][c] = 0
+
         # 확산이 다 된 값과 answer를 비교하여 최솟값 도출, Diffusion 진행
         answer = min(answer, Diffusions(deque(arr), boards, visited, N, zero))
     else:
