@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 21611 마법사 상어와 블리자드 (yeonju)"
