@@ -2,63 +2,112 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 
-dx = [0, 1, 0, -1]
-dy = [1, 0, -1, 0]
+# 동서남북
+dx = [0, 0, 1, -1]
+dy = [1, -1, 0, 0]
 
-n, m, z = map(int, input().split())
-    
+
+def move(x, y, direction):
+    nx = x + dx[direction]
+    ny = y + dy[direction]
+
+    if 0 <= nx < n and 0 <= ny < m:
+        pass
+    else:
+        if direction in (0, 2):
+            direction += 1
+        elif direction in (1, 3):
+            direction -= 1
+
+        nx = x + dx[direction]
+        ny = y + dy[direction]
+
+    return nx, ny, direction
+
+
+def roll_dice(dice, new_direction):
+    # 오른쪽
+    if new_direction == 0:
+        dice = {'up': dice['up'], 'left': dice['bottom'], 'top': dice['left'], 'right': dice['top'], 'down': dice['down'], 'bottom': dice['right']}
+    # 왼쪽
+    elif new_direction == 1:
+        dice = {'up': dice['up'], 'left': dice['top'], 'top': dice['right'], 'right': dice['bottom'],
+                'down': dice['down'], 'bottom': dice['left']}
+    # 아래로
+    elif new_direction == 2:
+        dice = {'up': dice['bottom'], 'left': dice['left'], 'top': dice['up'], 'right': dice['right'],
+                'down': dice['top'], 'bottom': dice['down']}
+    # 위로
+    else:
+        dice = {'up': dice['top'], 'left': dice['left'], 'top': dice['down'], 'right': dice['right'],
+                'down': dice['bottom'], 'bottom': dice['up']}
+
+    return dice
+
+
+def count_score(b, new_x, new_y):
+    c = 1
+    visited = [[0 for _ in range(m)] for _ in range(n)]
+    queue = deque()
+    queue.append((new_x, new_y))
+    visited[new_x][new_y] = 1
+
+    while queue:
+        x, y = queue.popleft()
+
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+
+            if 0 <= nx < n and 0 <= ny < m:
+                if arr[nx][ny] == b and visited[nx][ny] != 1:
+                    queue.append((nx, ny))
+                    visited[nx][ny] = 1
+                    c += 1
+    return b * c
+
+
+def compare_direction(a, b, new_direction):
+    if a > b:
+        if new_direction == 0: new_direction = 2
+        elif new_direction == 1: new_direction = 3
+        elif new_direction == 2: new_direction = 1
+        else: new_direction = 0
+
+    elif a < b:
+        if new_direction == 0:
+            new_direction = 3
+        elif new_direction == 1:
+            new_direction = 2
+        elif new_direction == 2:
+            new_direction = 0
+        else:
+            new_direction = 1
+
+    return new_direction
+
+
+n, m, k = map(int, input().split())
 arr = [list(map(int, input().split())) for _ in range(n)]
-
-score = [[0] * m for _ in range(n)]
-visited = [[0] * m for _ in range(n)]
-
-for i in range(n):
-    for j in range(m):
-        if not visited[i][j]:
-            q = deque([[i, j]])
-            visited[i][j] = 1
-            val = 1
-            coordinate = [(i, j)]
-            while q:
-                x, y = q.popleft()
-                for k in range(4):
-                    nx, ny = x + dx[k], y + dy[k]
-                    if 0 <= nx < n and 0 <= ny < m and not visited[nx][ny] and arr[x][y] == arr[nx][ny]:
-                        visited[nx][ny] = 1
-                        val += 1
-                        coordinate.append((nx, ny))
-                        q.append([nx, ny])
-            for x, y in coordinate:
-                score[x][y] = arr[x][y] * val
-
-dice = [2, 1, 5, 6, 4, 3]  
-down = [0, 6, 5, 4, 3, 2, 1]
-ans = 0
-arrow = 0  
 x, y = 0, 0
-nx, ny = 0, 0
+direction = 0
+dice = {'up': 2, 'left': 4, 'top': 1, 'right': 3, 'down': 5, 'bottom': 6}
+score = 0
 
-for _ in range(z):
-    x, y = nx, ny
-    nx, ny = x + dx[arrow], y + dy[arrow]
-    if not (0 <= nx < n and 0 <= ny < m): 
-        arrow = (arrow + 2) % 4
-        nx, ny = x + dx[arrow], y + dy[arrow]
+# 점이 이동하는 함수
+for i in range(k):
+    new_x, new_y, new_direction = move(x, y, direction)
 
-    ans += score[nx][ny]
+# 이동한 후 주사위가 굴러가는 함수
+    new_dice = roll_dice(dice, new_direction)
 
-    if arrow == 0: 
-        dice[4], dice[1], dice[5], dice[3] = dice[3], dice[4], dice[1], dice[5]
-    if arrow == 1: 
-        dice[0], dice[1], dice[2], dice[3] = dice[3], dice[0], dice[1], dice[2]
-    if arrow == 2:
-        dice[4], dice[1], dice[5], dice[3] = dice[1], dice[5], dice[3], dice[4]
-    if arrow == 3: 
-        dice[0], dice[1], dice[2], dice[3] = dice[1], dice[2], dice[3], dice[0]
+# 점수 획득하는 함수
+    b = arr[new_x][new_y]
+    score += count_score(b, new_x, new_y)
 
-    if dice[3] > arr[nx][ny]: 
-        arrow = (arrow + 1) % 4
-    if dice[3] < arr[nx][ny]: 
-        arrow = (arrow + 3) % 4
+# 비교하는 함수
+    a = new_dice['bottom']
+    new_direction = compare_direction(a, b, new_direction)
+    x, y, direction, dice = new_x, new_y, new_direction, new_dice
 
-print(ans)
+print(score)
