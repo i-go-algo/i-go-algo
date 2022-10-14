@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 20061 모노미노도미노 2 (yoonseok)"
