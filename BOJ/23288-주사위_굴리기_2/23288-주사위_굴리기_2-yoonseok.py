@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # git commit -m "submit : BOJ 23288 주사위 굴리기 2 (yoonseok)"
 from collections import deque
  
@@ -80,3 +81,6 @@ for i in range(K):
     elif A < B:dir = (dir + 1) % 4
  
 print(result)
+=======
+# git commit -m "submit : BOJ 23288 주사위 굴리기 2 (yeonju)"
+>>>>>>> a882390a6241d9e367ea7a865d36fcc50561f559
