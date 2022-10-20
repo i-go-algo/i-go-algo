@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 20057 마법사 상어와 토네이도 (yoonseok)"
