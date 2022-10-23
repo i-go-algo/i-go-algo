@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 20056 마법사 상어와 파이어볼 (eonyong)"
