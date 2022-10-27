@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 01197 최소 스패닝 트리 (yoonseok)"
