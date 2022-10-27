@@ -2,11 +2,10 @@
 import math
 from collections import deque
 
-# 남 동 북 서
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
 
-n, l, r = map(int, input().split())  # n*n, 인구차이 l명 이상, r명 이하
+n, l, r = map(int, input().split())
 
 arr = list()
 a_list = list()

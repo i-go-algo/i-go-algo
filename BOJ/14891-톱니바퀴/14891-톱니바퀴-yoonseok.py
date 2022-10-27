@@ -4,7 +4,6 @@
 magnet = []
 for i in range(4):
     magnet.append(list(map(int,input())))
-    print(magnet[i])
 n = int(input())
 ind = [0,0,0,0]
 stick = [False,False,False,False]
