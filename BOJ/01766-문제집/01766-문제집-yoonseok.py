@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 01766 문제집 (yoonseok)"
