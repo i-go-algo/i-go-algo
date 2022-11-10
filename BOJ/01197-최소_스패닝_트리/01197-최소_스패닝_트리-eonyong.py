@@ -5,36 +5,27 @@ input = sys.stdin.readline
 
 
 def Union(s, e, parents):
-    s = Find(s)
-    e = Find(e)
-    if e < s:
-        parents[s] = e
-    else:
-        parents[e] = s
+    parents[max(s, e)] = min(s, e)
     return parents
 
 
 def Find(v):
     if v == parents[v]:
         return v
-    parents[v] = Find(parents[v])
-    return parents[v]
+    return Find(parents[v])
 
 
 answer = 0
 n, m = map(int, input().split())
-nodes = []
-for _ in range(m):
-    s, e, w = map(int, input().split())
-    nodes.append([s, e, w])
 
+nodes = [list(map(int, input().split())) for _ in range(m)]
 nodes.sort(key=lambda x: x[2])
 
 parents = list(range(n + 1))
 
 for s, e, w in nodes:
     if Find(s) != Find(e):
-        parents = Union(s, e, parents)
+        Union(Find(s), Find(e), parents)
         answer += w
 
 print(answer)
