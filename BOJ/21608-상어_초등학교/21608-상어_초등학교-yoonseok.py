@@ -8,7 +8,6 @@ arr = [[0]*n for _ in range(n)]
 
 students = [list(map(int, input().split())) for _ in range(n**2)]
 
-
 for order in range(n**2):
     student = students[order]
 

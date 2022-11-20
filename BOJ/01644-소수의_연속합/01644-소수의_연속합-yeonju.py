@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 01644 소수의 연속합 (yeonju)"
