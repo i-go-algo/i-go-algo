@@ -1,0 +1,1 @@
+# git commit -m "submit : BOJ 02252 줄 세우기 (eonyong)"
