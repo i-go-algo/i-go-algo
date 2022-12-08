@@ -10,7 +10,7 @@ for i in range(1,n):
     palin[i][i+1]=(s[i]==s[i+1])
 for j in range(2,n):
     for i in range(1,n-j+1):
-        if s[i]==s[i+j]&& palin[i+1][i+j-1]:
+        if s[i]==s[i+j] and palin[i+1][i+j-1]:
             palin[i][i+j]=1
 dp[0]=0
 for i in range(1,n+1):
