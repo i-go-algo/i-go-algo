@@ -17,17 +17,17 @@ def RemainNum(row, col, board, n):
     return True
 
 
-def Sudoku(i, l, zeros, board):
-    if i == l:
-        for ans in [''.join(list(map(str, n))) for n in board]:
+def Sudoku(I, l, zeros, board):
+    if I == l:
+        for ans in [‘’.join(list(map(str, n))) for n in board]:
             print(ans)
         exit(0)
     else:
-        r, c = zeros[i]
+        r, c = zeros[I]
         for num in range(1, 10):
             if RemainNum(r, c, board, num):
                 board[r][c] = num
-                Sudoku(i + 1, l, zeros, board)
+                Sudoku(I + 1, l, zeros, board)
                 board[r][c] = 0
 
 
